@@ -41,7 +41,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle('PySide6 tabbed browser Example')
+        self.setWindowTitle('PyWeb')
 
         self._tab_widget = BrowserTabWidget(create_main_window_with_browser)
         self._tab_widget.enabled_changed.connect(self._enabled_changed)
@@ -231,7 +231,7 @@ class MainWindow(QMainWindow):
         window_menu.addAction(reset_zoom_action)
 
         about_menu = self.menuBar().addMenu("&About")
-        about_action = QAction("About Qt", self,
+        about_action = QAction("About PyWeb", self,
                                shortcut=QKeySequence(QKeySequence.HelpContents),
                                triggered=qApp.aboutQt)
         about_menu.addAction(about_action)
